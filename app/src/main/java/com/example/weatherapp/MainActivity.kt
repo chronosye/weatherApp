@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
                 retrofit.create(WeatherService::class.java)
 
             val listCall: Call<WeatherResponse> =
-                service.getWeather(mLatitude, mLongitude, Constants.METRIC_UNIT, Constants.APP_ID)
+                service.getWeather(mLatitude, mLongitude, Constants.METRIC_UNIT, BuildConfig.weatherKey)
 
             showCustomProgressDialog()
 
